@@ -1,0 +1,8 @@
+help - HELPS
+start <program-name> - Launcher
+cls - clear screen
+cp - Copy
+sndvol - Volume Mixer
+explorer - File Manger
+notepad - ntPAdd
+mountvol E: /P - Unmount partition E
