@@ -1,8 +1,23 @@
 help - HELPS
+
 start <program-name> - Launcher
+
 cls - clear screen
+
 cp - Copy
+
 sndvol - Volume Mixer
+
 explorer - File Manger
+
+
 notepad - ntPAdd
+
+//Mounting
 mountvol E: /P - Unmount partition E
+
+
+//Check Processor
+$Env:PROCESSOR_ARCHITECTURE
+              OR
+%PROCESSOR_ARCHITECTURE%
