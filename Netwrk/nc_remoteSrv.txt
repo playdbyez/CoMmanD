@@ -4,6 +4,9 @@ NetCt
 //Enables reverse-shell
 //Enables File Transfer
 
+1 - Consult if '-e' / 'exec=PROGRAM' is enabled on your installation 
+$ nc -h
+
 :::::::::::::::::: :: Message-Transfer :: :::::::::::::::::::
 
 1 - Start a Listening server
