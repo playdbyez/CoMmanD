@@ -14,3 +14,9 @@ kill -KILL <pid>
 //ID ports
 ss -a
 
+#################################################
+List Open Files
+ 
+$ lsof -i  -P -n
+
+
