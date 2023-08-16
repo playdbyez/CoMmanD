@@ -10,10 +10,10 @@ sndvol - Volume Mixer
 
 explorer - File Manger
 
+sc query - Services
 
 notepad - ntPAdd
 
-//Mounting
 mountvol E: /P - Unmount partition E
 
 
@@ -114,3 +114,4 @@ $ dir = $ ls
 $ cls = $ clear
 $ ./help.txt  = xdg-open help.txt
 $ Help > help.txt  = print command to a file
+$ command > ToFile
