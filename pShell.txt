@@ -1,27 +1,3 @@
-help - HELPS
-
-start <program-name> - Launcher
-
-cls - clear screen
-
-cp - Copy
-
-sndvol - Volume Mixer
-
-explorer - File Manger
-
-sc query - Services
-
-notepad - ntPAdd
-
-mountvol E: /P - Unmount partition E
-
-
-//Check Processor
-$Env:PROCESSOR_ARCHITECTURE
-              OR
-%PROCESSOR_ARCHITECTURE%
-
 
 ######################################
             cmdlets
@@ -110,8 +86,4 @@ adds folder to trustworthy golders group
 
 
 
-$ dir = $ ls
-$ cls = $ clear
-$ ./help.txt  = xdg-open help.txt
-$ Help > help.txt  = print command to a file
-$ command > ToFile
+
