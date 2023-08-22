@@ -12,6 +12,9 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 
 ##################################################################################
 
+!! a
+//repeats last command starting with 'a' 
+
 sudo find / -name *.pdf
 //finds all pdf files
 
@@ -30,6 +33,8 @@ stat file_name
 $ which ls
 //finds command location
 
+whatis ls
+//Prints command name
 
 
 /
