@@ -63,6 +63,8 @@ ps <processName> pid,vsize,rss,%cpu --sort=-rss | less
 Steganography
 ####################################
 
+cat etc/services
+//Displays list of assigned ports
 
 lsb_release -a
 //display Ubuntu  Version
