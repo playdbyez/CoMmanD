@@ -15,26 +15,40 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 !! a
 //repeats last command starting with 'a' 
 
-sudo find / -name *.pdf
+$ sudo find / -name *.pdf
 //finds all pdf files
 
-du -sh file 
+$ du -sh file 
 //Displays filesize
 
-ls -l path-to-file
+$ ls -l path-to-file
 //displays path to file with ls 
 
-ls -lh filename
+$ ls -lh filename
 //shows file info with ls
 
-stat file_name
+$ stat file_name
 //shows file info with stat
 
 $ which ls
 //finds command location
 
-whatis ls
+$ whatis ls
 //Prints command name
+
+$ sudo ss -p -e
+$ sudo ss -tulpn
+//Scan Sockets and show Processes in extended format
+
+$ lsof -i -P -n
+//Show system sockets
+
+$ systemctl status <processName>
+//Displays process id and memory usage as well as child processes
+//processName could be 'httpd'
+
+$ ps -p $(pidof <processName>)
+//Show all processes associated
 
 
 /
