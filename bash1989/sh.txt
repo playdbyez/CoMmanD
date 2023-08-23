@@ -4,9 +4,6 @@
 
 USE < BleachBit > Software for cleansing "log files" like .xml
 
-
-
-
 ~/.local/share/recently-used.xbel/
 //gedit,nautilus,etc..
 
@@ -44,11 +41,21 @@ $ lsof -i -P -n
 //Show system sockets
 
 $ systemctl status <processName>
-//Displays process id and memory usage as well as child processes
+//Displays process id and memory usage as well as child/parent processes
 //processName could be 'httpd'
 
 $ ps -p $(pidof <processName>)
 //Show all processes associated
+
+$ ps -p <processNumb> -o etime
+//Shows how long the process has been running since boot
+
+$ ps --forst -C <processName> -o pid.ppid,cmd
+//Shows a process's hierarchy (childs)
+
+ps <processName> pid,vsize,rss,%cpu --sort=-rss | less
+//Display virtual memory size, resident memory size, cpu consumption 
+//While sorting by descending Resident Set Size
 
 
 /
