@@ -1,113 +1,46 @@
 LIVE USB BOOT
 CHECKING DISK ...
-1 - /pool/main/g/glib/libc6-dev_2.31-0ubuntu9_amd64.deb
+|
+|
+V
+
+1  - /pool/main/g/glib/libc6-dev_2.31-0ubuntu9.2_amd64.deb
+         Contains the symlinks,
+         Headers,
+         Object files 
+         To compile and link programs which use the standard C library.
+
+2  - /pool/main/linux-oem5.6/linux-modules-5.6.0-1027-oem_5.6.0-1027.27_amd64.deb
+         Contains the system's System.map file, (amd64 system.map) 
+         The modules built by the packager.
+         Scripts that try to ensure that the system is not left in an unbootable state after an update.
+         Supports OEM processors.
+
+3  - /pool/main/linux-signed-oem-5.6/linux-image-5.6.0-1047-oem_5.6.0-1047_51_amd64.deb
+4  -  /pool/main/l/llvm-toolchain-9/libllvm9_9.0.1-12_i386.deb
 
 
-2 - /pool/main/linux-oem5.6/linux-modules-5.6.0-1027-oem_5.6.0-1027.27_amd64.deb
-Contains the system's System.map file, (amd64 system.map) 
-The modules built by the packager.
-Scripts that try to ensure that the system is not left in an unbootable state after an update.
-Supports OEM processors.
+
+8%  - /pool/main/m/mesa/mesa-vulkan-drivers_20.2.6-0ubuntu0.20.04.1_i386.deb
 
 
-3 - /pool/main/linux-signed-oem-5.6/linux-image-5.6.0
-4 - 
-5 - 
-6 - 
-7 - 
-8 - 
-9 - 
-10 - 
-11 - 
-12 - 
-13 - 
-14 - 
-15 - 
-16 - 
-17 - 
-18 - 
-19 - 
-20 - 
-21 - 
-22 - 
-23 - 
-24 - 
-25 - 
-26 - 
-27 - 
-28 - 
-29 - 
-30 - 
-31 - 
-32 - 
-33 - 
-34 - 
-35 - 
-36 - 
-37 - 
-38 - 
-39 - 
-40 - 
-41 - 
-42 - 
-43 - 
-44 - 
-45 - 
-46 - 
-47 - 
-48 - 
-49 - 
-50 - 
-51 - 
-52 - 
-53 - 
-54 - 
-55 - 
-56 - 
-57 - 
-58 - 
-59 - 
-60 - 
-61 - 
-62 - 
-63 - 
-64 - 
-65 - 
-66 - 
-67 - 
-68 - 
-69 - 
-70 - 
-71 - 
-72 - 
-73 - 
-74 - 
-75 - 
-76 - 
-77 - 
-78 - 
-79 - 
-80 - 
-81 - 
-82 - 
-83 - 
-84 - 
-85 - 
-86 - 
-87 - 
-88 - 
-89 - 
-90 - 
-91 - 
-92 - 
-93 - 
-94 - 
-95 - 
-96 - 
-97 - 
-98 - 
-99 - 
-100 - 
+
+
+11% -  /pool/restricted/n/nvidia-graphis-drivers-390/libnvidia-gl-390_390.141-0ubuntu0.20.04.1_i386.deb
+13% -  /pool/restricted/n/nvidia-graphis-drivers-450/libnvidia-gl-450_450.102.04-0ubuntu0.20.04.1_amd64.deb
+15% -  /pool/restricted/n/nvidia-graphis-drivers-460/libnvidia-compute-460_460.32.03-0ubuntu0.20.04.1_amd64.deb
+9 -  /pool/restricted/n/nvidia-graphis-drivers-460/nvidia-kernel-source-460_460.32.03-0ubuntu0.20.04.1_amd64.deb
+17% - /pool/restricted/n/nvidia-graphis-drivers-460/libnvidia-gl-460_460.32.03-0ubuntu0.20.04.1_amd64.deb
+19% - /pool/restricted/n/nvidia-graphis-drivers-460/libnvidia-kernel-source-460_460.32.03-0ubuntu0.20.04.1_amd64.deb
+
+21% - /pool/restricted/l/linux-restricted-modules-oem-5.6/linux-modules-nvidia-440-5.6.0-1027-oem_5.6.0-1027.27_amd64.deb
+22% - /pool/restricted/l/linux-restricted-modules-oem-5.6/linux-modules-nvidia-460-5.6.0-1047-oem_5.6.0-1047.51_amd64.deb
+25% - ./casper/filesystem.squashfs
+95% - ./casper/filesystem.squashfs
+96% -  ./casper/vmlinuz 
+98% -  ./casper/initrd
+99% -  ./casper/initrd 
+
  
 
 
