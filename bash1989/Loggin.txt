@@ -1,0 +1,5 @@
+LOCATION : /var/log
+
+$ cat boot.log
+//Boot Process Check
+
