@@ -66,6 +66,9 @@ Steganography
 cat etc/services
 //Displays list of assigned ports
 
+cat etc/os-release
+//display OS verison
+
 lsb_release -a
 //display Ubuntu  Version
 
