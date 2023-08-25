@@ -10,7 +10,7 @@ Scripts that try to ensure that the system is not left in an unbootable state af
 Supports OEM processors.
 
 
-3 - 
+3 - /pool/main/linux-signed-oem-5.6/linux-image-5.6.0
 4 - 
 5 - 
 6 - 
