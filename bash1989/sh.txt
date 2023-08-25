@@ -33,6 +33,12 @@ $ which ls
 $ whatis ls
 //Prints command name
 
+$ cat file.txt | wc
+//Word count of file.txt
+
+$ ls /var | wc -l
+//Line count of output of ls
+
 $ sudo ss -p -e
 $ sudo ss -tulpn
 //Scan Sockets and show Processes in extended format
