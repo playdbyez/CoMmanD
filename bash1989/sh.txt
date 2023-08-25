@@ -38,7 +38,7 @@ $ sudo ss -tulpn
 //Scan Sockets and show Processes in extended format
 
 $ lsof -i -P -n
-//Show system sockets
+//List Open Files
 
 $ systemctl status <processName>
 //Displays process id and memory usage as well as child/parent processes
