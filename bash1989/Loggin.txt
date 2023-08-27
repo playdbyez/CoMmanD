@@ -3,6 +3,9 @@ LOCATION : /var/log
 $ cat boot.log
 //Boot Process Check
 
+$ last
+//To read gibberish files
+
 
 https://www.netsurion.com/articles/top-5-linux-log-file-groups-in-var-log
 
