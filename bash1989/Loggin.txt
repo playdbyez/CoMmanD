@@ -6,6 +6,9 @@ $ cat boot.log
 $ last
 //To read gibberish files
 
+$ sudo lastb -adF
+//To read gibberish files
+
 
 https://www.netsurion.com/articles/top-5-linux-log-file-groups-in-var-log
 
