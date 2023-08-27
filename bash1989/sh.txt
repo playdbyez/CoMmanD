@@ -9,7 +9,12 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 
 ##################################################################################
 
-!! a
+$ systemd-analyze plot
+$ systemd-analyze blame
+$ systemd-analyze dump
+//Analyse Boot with exec times
+
+$ !! a
 //repeats last command starting with 'a' 
 
 $ sudo find / -name *.pdf
