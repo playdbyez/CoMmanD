@@ -19,6 +19,10 @@ $ sudo systemctl list-unit-files | grep enabled"
 //This will show what services are enabled to start as soon as the computer boots.
 
 
+$ last
+//Enables last binnary file to be converted to simple text  
+()
+
 $ !! a
 //repeats last command starting with 'a' 
 
