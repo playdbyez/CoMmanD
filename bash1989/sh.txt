@@ -9,6 +9,10 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 
 ##################################################################################
 
+$ dmesg
+//Check for physical ports active and inactive
+
+
 $ systemd-analyze plot
 $ systemd-analyze blame
 $ systemd-analyze dump
