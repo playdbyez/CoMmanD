@@ -64,9 +64,12 @@ $ sudo ss -tulpn
 $ lsof -i -P -n
 //List Open Files
 
-$ systemctl status <processName>
+$ sudo systemctl status <processName>
 //Displays process id and memory usage as well as child/parent processes
 //processName could be 'httpd'
+
+$ sudo lsof -c <ProcessName>
+//Sort through lsof with  specific name
 
 $ ps -p $(pidof <processName>)
 //Show all processes associated
