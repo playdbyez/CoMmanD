@@ -7,11 +7,21 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 ~/.local/share/recently-used.xbel/
 //gedit,nautilus,etc..
 
+
 ##################################################################################
+
+$ (inside terminal, Press: Ctrl+X + E)
+//opens an editor that will execute upon save/exit
+
+$ sleep 12
+Ctrl + D
+[1]+  Stopped  sleep 12
+$ bg
+//After stopping, restart previous command but run it in the background
+
 
 $ dmesg
 //Check for physical ports active and inactive
-
 
 $ systemd-analyze plot
 $ systemd-analyze blame
@@ -28,7 +38,10 @@ $ last
 ()
 
 $ !! a
-//repeats last command starting with 'a' 
+//repeats last command starting with 'a'
+
+$ sudo !!
+//repeats the last command but with sudo priviledges
 
 $ sudo find / -name *.pdf
 //finds all pdf files
@@ -120,6 +133,9 @@ curl ifconfig.me
 
 //Steganography
 
+$  echo 'hi'
+// by adding a space before comand it will not  be saved to history
+
 ip -o -f inet addr show | awk '/scope global/{print $2,$4,$6}'
 //Returns 3 values
 //Network interface name
@@ -127,3 +143,50 @@ ip -o -f inet addr show | awk '/scope global/{print $2,$4,$6}'
 //The broadcast IP address for that interface's subnet
 
 
+$ mkdir -p /mnt/ram
+$ mount -t tmpfs tmpfs /mnt/ram -o size=8192M
+//Create a virtual Hard drive (Ram Disk) for faster R/W speed
+//Memmory is temp, unmounting results in data deletion
+
+
+//Speed Testing 1:
+$ cd /mnt
+$ mkdir ram
+$ cd /ram
+$ dd if=/dev/zero of=test.iso bs=1M count 8000
+//
+$ rm test.iso
+
+//Speed Testing 2:
+$ cd /mnt
+$ mount -t tmpfs tmpfs /mnt/ram -o size=8192M
+$ cd /ram
+$ dd if=/dev/zero of=test.iso bs=1M count 8000
+//
+$ rm test.iso
+
+
+
+$ ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
+//
+CTRL + D
+$ bg
+$ redis-cli -p 3337
+// Tunnel ssh from my Local port 3337 -> remote host's loopback port emkc.org on port 6379
+// Run on background
+// Connect to redis instance
+
+
+$ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
+$ mkdir -p folder/{1..100}/{1..100}
+//Creates parents to child ratio of folders
+//sub 1 = sub1 + sub2 + sub3
+//1 = 1+2+3+4... 99
+
+
+$ cat file | tee -a log | cat > dev/null
+// tee will apphend the previous pipes to a file is used with argument -a
+
+$ disown -a && exit
+// exiting terminal but leaving processess running (NoHangupSignal)
+$ ps -aux | greep <sleep>
