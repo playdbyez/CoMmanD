@@ -19,7 +19,7 @@ $ systemd-analyze dump
 //Analyse Boot with exec times
 
 
-$ sudo systemctl list-unit-files | grep enabled" 
+$ sudo systemctl list-unit-files | grep enabled
 //This will show what services are enabled to start as soon as the computer boots.
 
 
