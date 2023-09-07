@@ -4,7 +4,7 @@ $ ./help.txt  = xdg-open help.txt
 $ Help > help.txt  = print command to a file
 $ command > ToFile
 
-
+winver - Displays Windows Version
 help - HELPS
 
 start <program-name> - Launcher
