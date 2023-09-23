@@ -28,6 +28,8 @@ $ dd if=image.jpeg bs=1 skip=$((16#921c)) of=result.bin
 //have to convert the signature's hex to decimal for 'skip' option with $(((16#value))
 
 $ base64 --decode -i result.bin
+//Right section of xxd or hexdump of a file helps recognise the assignment operator that
+//hints to the encoding
 
 
 
