@@ -1,8 +1,17 @@
+//Google Chrome's APPDATA file is usually set as hidden either on:
+
+> %LOCALAPPDATA%\Google\Chrome\User Data\
+> C:\Users\office1\AppData\Local\Google 
+
 Out1ook out
 /owa/logoff.owa
 
 
 Enable Reader mode
 chrome://flags/
+
+
+
+
 
 https://www.site24x7.com/linux-monitoring.html?
