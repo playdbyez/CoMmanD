@@ -17,8 +17,22 @@ $ /usr/include/X11
 ##################################################################################
 
 
-$ lscpu > tmp/text.txt
+$ sudo dmidecode > /tmp.text
+// Display Desktop Management Interface
+//sysinfo,bios,keyboard,pcboard,chassis,ports,mem
 
+$ sudo lshw > > /tmp.text 
+// List hardware, pci bridge, wireless, usb ports and partitions
+
+$ sudo hwinfo --short
+// Probe for hardware
+
+$ sudo inxi -b -c > tmp/text.txt
+//IRC and console info#
+//processes active and uptime
+
+$ lscpu > tmp/text.txt
+// Cpu info
 $ lsusb > tmp/text.txt
 
 $ lsusb -v -s <bus# : devic#> > tmp/text.txt
