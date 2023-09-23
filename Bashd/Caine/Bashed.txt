@@ -19,9 +19,10 @@ $ /usr/include/X11
 
 $ xxd image.jpg | less
 //Creates a hexdump of file
-//ffd8 = JPEG header
-//ffd9 = JPEG footer
-
+//ffd8 = JPEG header signature
+//ffd9 = JPEG footer signature (file has to end with)
+//00009210 = Hex offset 
+//0x921 + a letter corresponding to the position of the signature
 
 $ sudo dmidecode > /tmp.text
 // Display Desktop Management Interface
