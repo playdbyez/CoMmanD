@@ -61,6 +61,7 @@ $ lspci -vvv > tmp/text.txt
 $ lsblk -S 
 //show scsi devices, HD
 
+$ steghide extract -sf image.jpg
 $ cat proc/cpuinfo
 $ cat proc/meminfo
 $ cat proc/scsi
