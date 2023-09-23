@@ -1,0 +1,33 @@
+Defined by:  Filesystem Hierarchy Standard (specification archives)
+Linux File System
+
+<<use which or pmap to trace an binary or process path respectively>>
+::::::::::::::::::::::::::::::::::::
+              /(root)
+              |
+              |
+              |
+              /boot
+              /dev
+              /var
+              /lib
+              /bin
+              /sbin
+              /usr
+              |
+              /home
+              /tmp
+              /etc
+:::::::::::::::::::::::::::::::::::::::
+
+Both bin & sbin derive libraries from /lib
+BIN > Tools executables
+SBIN > System executables (root only)
+LIB >
+
+USR > Non-essential to the OS, intended for end user, includes dir /local & /bin 
+/usr/bin > 
+/usr/local > 
+
+
+VAR > keepts tracks of logs

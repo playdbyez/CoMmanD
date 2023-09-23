@@ -1,0 +1,14 @@
+1 - A command is requested by the system/user to the InitSystem
+2 - Command is given a Process ID (PID) by the initSystem
+3 - Process is scheduled onto the cpu (Running)
+
+Systemd = Init System
+Initi System' schedule commands
+
+
+PID = Process Identifyer
+TID = Thread Identifyer
+TSKCMD = Task Command : name of the command scheduled
+USER = Which user Created the process
+TYPE = Type of object: file,dir,etc
+NODE= iNode: Every file has na inode numb to keep track of permissions, filesize, etc

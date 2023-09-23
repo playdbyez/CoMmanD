@@ -1,0 +1,129 @@
+Fedora Server(Learn Linux yt) 
+
+
+$ cat var/log/boot.log
+$ sudo systemctl disable NetworkManager-wait-online.service
+$ sudo systemctl status firewalld.service
+$ sudo systemctl status iptables.service
+
+
+
+
+[1] - logrotate.service
+[2] - bluetooth.service
+[3] - rtkit-daemon.servi..timekit Scheduling Policy Service
+[4] - avahi-dameon.service
+[5] - systemd-logind.service
+[6] - systemd-machined.s..nd Container Registration Service
+[7] - bluetooth.target 
+[8] - switcheroo-control Switcheroo Control Proxy service
+[9] - abrtd.service
+[10] - abrt-journal-core. ..problems for coredumpctl messages
+[11] - abrt-oops.service
+[12] - abrt-xorg.service
+[13] - alsa-state.service
+[14] - 
+[15] - 
+[16] - 
+[17] - 
+[18] - 
+[19] - 
+[20] - 
+[21] - 
+[22] - 
+[23] - 
+[24] - 
+[25] - 
+[26] - 
+[27] - 
+[28] - 
+[29] - 
+[30] - 
+[31] - 
+[32] - 
+[33] - 
+[34] - 
+[35] - 
+[36] - 
+[37] - 
+[38] - 
+[39] - 
+[40] - 
+[41] - 
+[42] - 
+[43] - 
+[44] - 
+[45] - 
+[46] - 
+[47] - 
+[48] - 
+[49] - 
+[50] - 
+[51] - 
+[52] - 
+[53] - 
+[54] - 
+[55] - 
+[56] - 
+[57] - 
+[58] - 
+[59] - 
+[60] - 
+[61] - 
+[62] - 
+[63] - 
+[64] - 
+[65] - 
+[66] - 
+[67] - 
+[68] - 
+[69] - 
+[70] - 
+[71] - 
+[72] - 
+[73] - 
+[74] - 
+[75] - 
+[76] - 
+[77] - 
+[78] - 
+[79] - 
+[80] - 
+[81] - 
+[82] - 
+[83] - 
+[84] - 
+[85] - 
+[86] - 
+[87] - 
+[88] - 
+[89] - 
+[90] - 
+[91] - 
+[92] - 
+[93] - 
+[94] - 
+[95] - 
+[96] - 
+[97] - 
+[98] - 
+[99] - 
+
+
+
+
+
+{
+ModemManager.service
+firewalld.service
+network-pre.target
+NetworkManager.service
+network.target
+NetworkManager-wait-online.service
+cups.service
+sshd.service
+gssproxy.service
+Network Manager Script Dispatcher Service
+wpa_supplicant.service
+network-online.target
+}

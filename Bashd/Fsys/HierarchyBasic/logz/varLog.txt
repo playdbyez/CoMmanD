@@ -1,0 +1,34 @@
+Ubuntu 20.04
+$ ls /var/log
+
+<<FILES>>
+alternatives.log
+auth.log
+boot.log
+bootstrap.log
+btmp
+dmesg
+dmesg.0
+dpkg.log
+faillog
+fontconfig.log
+gpu-manager.log 
+kern.log
+lastlog
+syslog
+ubuntu-advantage.log
+ubuntu-advantage-timer.log
+wtmp
+
+<<DIRS>>
+apt
+cups
+dist-upgrade
+gdm3
+hp
+installer
+journal
+openvpn
+private
+speech-dispatcher
+unattended-upgrades

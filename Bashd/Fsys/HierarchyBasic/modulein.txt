@@ -1,0 +1,16 @@
+Attempting at interacting with a char file
+
+
+$ sudo insmod hello.ko
+
+
+$ lsmod
+
+
+$ tail var/log/syslog
+
+
+$ sudo rmmod a.out
+
+
+$ tail var/log/syslog

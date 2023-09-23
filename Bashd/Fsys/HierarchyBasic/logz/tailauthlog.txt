@@ -1,0 +1,4 @@
+
+
+$ sudo tail -f auth.log
+//Enables Follow mode
