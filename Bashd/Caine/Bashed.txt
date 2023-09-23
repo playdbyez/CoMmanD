@@ -16,6 +16,14 @@ $ /usr/include/X11
 
 ##################################################################################
 
+$ ffmpeg -i music.wav -af "pan=1|c0=c0" left.wav
+//outputs to left.wav, only the left audio channel of music wav
+
+$ ffmpeg -i music.wav -af "pan=1|c1=c1" right.wav
+//outputs to right.wav, only the right audio channel of music wav
+
+$ ffplay left.wav
+//to play
 
 $ xxd image.jpg | less
 //Creates a hexdump of file
