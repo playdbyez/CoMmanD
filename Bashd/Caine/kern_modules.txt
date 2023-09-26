@@ -67,3 +67,24 @@ $ find. -name iwlwifi.ko
 $ sudo insmod '!!'
 // will append output of find to the  insmod command
 
+$ ping linux.org
+$ lsmod | grep iwl
+// check the module is loaded
+
+$ sudo rmmod iwlmvm iwlwifi
+// remove mod
+
+$ sudo modprobe iwlwifi
+//Faster method of adding modules and loading dependencies
+
+$sudo modprobe -r iwlwifi
+//remove a module with modprob
+
+ ::
+$ sudo sysctl -a | lesss
+//Lists all options and settings for specific parts of the kernel
+//categorized by networking,virual machine, etc
+
+
+
+//change a setting on the ping command
