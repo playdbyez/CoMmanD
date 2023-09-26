@@ -1,0 +1,14 @@
+As a sysAdmin to make changes and/or modifications to the kernel by ading and removing modules
+Kernel controls interactions between keyboard, monitor, disks and the network
+Linux system allows for modules to be added or removed
+Loadable Kernel Modules  are modular and can be loaded when needed or at boot but they must be maintained
+Some modules can extract memory without rebooting
+
+
+$ uname -a
+//Inspect Kern version.
+//SMP = Simetric Multi-Processig
+// 1- machine name, 2- processor type, 3- hardware platform
+(1- x86_64, 2- x86_64, 3- x86_64)
+(1- x32_arm)
+(1- spark)
