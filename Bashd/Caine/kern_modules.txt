@@ -65,5 +65,5 @@ $ lsmod | grep iwl
 
 $ find. -name iwlwifi.ko
 $ sudo insmod '!!'
-// will aphend output of find to the  insmod command
+// will append output of find to the  insmod command
 
