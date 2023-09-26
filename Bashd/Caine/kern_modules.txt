@@ -5,10 +5,65 @@ Loadable Kernel Modules  are modular and can be loaded when needed or at boot bu
 Some modules can extract memory without rebooting
 
 
+:: KERNEL VERSION ::
+
 $ uname -a
-//Inspect Kern version.
+//Inspect 
 //SMP = Simetric Multi-Processig
 // 1- machine name, 2- processor type, 3- hardware platform
 (1- x86_64, 2- x86_64, 3- x86_64)
 (1- x32_arm)
 (1- spark)
+
+$ uname -r
+//Release name that mdules use
+
+$ cat proc/version
+//Inspect a live file
+//for release and version info
+
+
+:: LOADED MODULES ::
+
+$ lsmod | less
+// Displays : module names | module size | number of dependants on this module 
+// to review loaded modules 
+
+$ less proc/modules
+//
+
+$ modinfo iwlwifi | less
+//gives filepath, liscence, vesion and dependencies 
+//depends  cfg80211  == the cfg module must be loaded in order for iwlwifi module to function 
+
+
+$ cd lib/modules
+$ ls 
+$ cd  into our version
+$ cd /kernel
+// will display module files
+
+
+:: REMOVE MODULES ::
+
+$ ping linux.org
+$ sudo rmmod iwlmvm
+$ !ping
+//remove wifi access modules
+
+$ lsmod | grep iwl
+//inspect for more wifi related modules
+
+
+:: ADDING MODULES ::
+
+$ insmod <PATHNAME.ko> 
+//How to add
+
+$ lsmod | grep iwl
+//Inspect that none iwl modules are loaded
+
+$ find. -name iwlwifi.ko
+$ sudo insmod '!!'
+// will aphend output of find to the  insmod command
+
