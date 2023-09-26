@@ -1,0 +1,108 @@
+You often want to be on an isolated network 
+So controlling your own DHCP server is essential
+Your server will be set up in order to assign ip addresses to isolated clients
+
+######################### :: Essentials :: #######################
+
+1 - IP address
+
+2 - NetMask
+  //defines the size of the network that your device is on, used to identify when youre reacing an outside network
+
+3- Default Getway
+//192.168.1.1
+// If a the destination is outside the netmask it will redirect to the default gateway
+
+4- DNS
+//Translate IP to domain names
+etc/resolve/config
+etc/host
+
+
+:::::::::DHCP Capabilities:::::::
+Assigns:
+
+WINS Servers
+Proxy Servers
+NTP Servers
+Domain name
+Hostname
+
+Only runs under UDP ports
+:::::::::::::::::::::::::::::::
+
+INSTALL & CONFIGURATION
+
+$ sudo apt install isc-dhcp-server -y
+
+$ cat etc/dhcp/dhcpd.conf
+Set up network interface on request or on a config file (ipconfig =eth0)
+
+lease time is in minutees
+Uncomment '#authoriative:' since the dhcp server is the admin one for your network
+Define a subnet for your interface
+
+'subnet 10.20.30.0 netmask 255.255.255.0 {
+interface enp0s31f6;
+range 10.20.30.100 10.20.30.150;
+option routers 10.20.30.1;                             // the gateway is the .1 machine
+option domain-name-servers 10.20.30.4, 10.20.30.8;    //Have them running on .4 .8 
+option domain-name "companyX.dfir";                    //Name for This network  
+}'
+
+
+START
+
+$ sudo systemctl start isc-dhcp-server
+//Starts servers
+
+$ systemctl status sc-dhcp-server
+$ ps -aux | grep dhcpd
+$ sudo netstat -lu4
+//Checks status
+
+$ tail -30 /var/log/syslog
+//if it has failed upon restart search for your any compiling errors
+
+$ sudo systemctl restart isc-dhcp-server
+//restart
+
+$ ip -br a
+// if your interface is missing an interface address (IP)
+
+$ sudo ip addr add 10.20.30.10/24 enp0s31f6
+// To assign an IP to your server
+// recheck status
+// and that this dhcp server is on the bootps service (port 67)
+
+
+
+TEST THE SERVER
+
+$ sudo dhclient enx9405bb10822b
+// from Another machine on the same physic LAN you can request an ethernet IP or a wireless IP
+// specify an interface otherwise both ethernet and wireless interfaces will allow a search on their network
+
+HANDSHAKE
+Client: -----> Discover--> : Server
+Client:<----- Offer ---<-- : Server
+Client: -----> Request --> : Server
+Client: <----- ACK -----<- : Server
+
+resulting in the server granting an lease to the client
+
+
+$ ping 10.20.30.10 
+//pinging the server that leased us a dhcp ip
+// to verify the ip was assigned properly
+
+$ ip -br a
+
+
+MONITOR 
+
+$ tail -30f var/log/syslog
+// To keep up with your dhcp activities inspect your logs for client requests and assignments
+
+$ more /var/lib/dhcp/dhcpd.leases
+// Inspect for any unauthorised leases
