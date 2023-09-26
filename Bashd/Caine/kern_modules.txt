@@ -80,11 +80,22 @@ $ sudo modprobe iwlwifi
 $sudo modprobe -r iwlwifi
 //remove a module with modprob
 
- ::
+
+
+ :: ADJUST BEHAVIOUR ::
+
+
 $ sudo sysctl -a | lesss
 //Lists all options and settings for specific parts of the kernel
 //categorized by networking,virual machine, etc
 
+$ sudo sysctl -a | grep echo_ignore
+$ ping -c4 localhost
 
 
+$ sudo sysctl -w net.ipv4.cimp.echo_ignore_all=1
 //change a setting on the ping command
+//ignore pings by turning off any icmp echoes
+
+
+$ ping 
