@@ -1,0 +1,27 @@
+Magnet User Summit 
+May 2023
+
+$ xxd image.jpg | less
+//Creates a hexdump of file
+//ffd8 = JPEG header signature
+//ffd9 = JPEG footer signature (file has to end with)
+
+//Identify the offset of the hex after ffd9 
+//in the middle set of gibberish
+
+//00009210 = Hex offset 
+//0x921 + a letter corresponding to the position of the signature
+// 921c
+
+$ dd if=image.jpeg bs=1 skip=$((16#921c)) of=result.bin
+//read image.jpeg with blockset set to 1 after you've skipped <converted signature> ammount of lines n output 2 binfile
+//CONVERTEDSIGNATURE = have to convert the signature's hex to decimal for 'skip' option with $(((16#value))
+
+//since the resulting bin file ended with '=='
+//its possible to deduce its a base64 enconded data-set
+//so use the decoder on your bin
+
+$ base64 --decode -i result.bin
+//Right section of xxd or hexdump of a file helps recognise the assignment operator that
+//hints to the encoding
+
