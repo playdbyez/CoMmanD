@@ -37,3 +37,10 @@ may request passphrase (press enter)
 ############# :: Stylesuxx  :: ############
 //works with png images
 //online tool is necessary
+
+
+############# :: wav :: ############
+
+//use VLC
+//play around with audio visualization
+//Identified option ='scope' to visualize right and left channels of file
