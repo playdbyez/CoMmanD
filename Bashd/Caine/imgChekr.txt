@@ -2,7 +2,7 @@ Magnet User Summit
 May 2023
 
 
-#### :: Manual Method :: #########
+#### :: jpeg :: #########
 $ xxd image.jpg | less
 //Creates a hexdump of file
 //ffd8 = JPEG header signature
