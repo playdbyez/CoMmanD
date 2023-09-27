@@ -44,3 +44,15 @@ may request passphrase (press enter)
 //use VLC
 //play around with audio visualization
 //Identified option ='scope' to visualize right and left channels of file
+//something off on left channel?
+//split the channels into files!!
+
+$ ffmpeg -i music.wav -af "pan=1|c0=c0" left.wav
+//outputs to left.wav, only the left audio channel of music wav
+
+$ ffmpeg -i music.wav -af "pan=1|c1=c1" right.wav
+//outputs to right.wav, only the right audio channel of music wav
+
+$ ffplay left.wav
+//to play
+
