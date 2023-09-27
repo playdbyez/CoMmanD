@@ -34,3 +34,6 @@ $ steghide extract -sf image.jpg
 //will result in  a new file 
 may request passphrase (press enter)
 
+############# :: Stylesuxx  :: ############
+//works with png images
+//online tool is necessary
