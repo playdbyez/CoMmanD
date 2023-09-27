@@ -1,6 +1,8 @@
 Magnet User Summit 
 May 2023
 
+
+#### :: Manual Method :: #########
 $ xxd image.jpg | less
 //Creates a hexdump of file
 //ffd8 = JPEG header signature
@@ -24,4 +26,11 @@ $ dd if=image.jpeg bs=1 skip=$((16#921c)) of=result.bin
 $ base64 --decode -i result.bin
 //Right section of xxd or hexdump of a file helps recognise the assignment operator that
 //hints to the encoding
+
+
+############# :: Jpeg, bmp, wav :: ############
+
+$ steghide extract -sf image.jpg
+//will result in  a new file 
+may request passphrase (press enter)
 
