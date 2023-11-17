@@ -13,6 +13,12 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 ##########################
 $ /usr/include/X11
 
+##########################  
+#     Frozen Terminal    #
+##########################
+[Ctrl + J]
+$ stty sane
+[Ctrl + J]
 
 ##################################################################################
 
@@ -39,12 +45,24 @@ $ lsusb -v -s <bus# : devic#> > tmp/text.txt
 //note unique id 'iserial'
 
 $ lspci > tmp/text.txt
-
 $ lspci -vvv > tmp/text.txt
 //used to create drivers
 
 $ lsblk -S 
 //show scsi devices, HD
+
+$ ls | more 
+//Displays long output page by page when SPACE is pressed
+
+$ touch .hydeFile
+//Creates hidden file
+
+
+$ rm Filenam*
+//removes all files within dir with a variant of the name filenam(e)
+
+
+
 
 $ steghide extract -sf image.jpg
 $ cat proc/cpuinfo
@@ -146,7 +164,6 @@ $ systemd-analyze plot
 $ systemd-analyze blame
 $ systemd-analyze dump
 //Analyse Boot with exec times
-
 
 
 $ last
@@ -296,16 +313,17 @@ ip -o -f inet addr show | awk '/scope global/{print $2,$4,$6}'
 //IP address for said interface followed by subnet mask (/24)
 //The broadcast IP address for that interface's subnet
 
-
+$ cu somesystem
+//CallUp is similar to ssh since it acts as a dial-in terminal to another system
 
 $ ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
 //
-CTRL + D
+[CTRL + Z]
 $ bg
 $ redis-cli -p 3337
 // Tunnel ssh from my Local port 3337 -> remote host's loopback port emkc.org on port 6379
 // Run on background
-// Connect to redis instance
+// Connect to redis instance/system
 
 
 $ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
@@ -322,3 +340,46 @@ $ disown -a && exit
 // exiting terminal but leaving processess running (NoHangupSignal)
 
 $ ps -aux | greep <sleep>
+
+$ cp olddir/protected.file /dir/protected.file.copy
+$ chown protected.file.copy
+//Work around to protected files
+
+$ grep -i -l "xd" *
+// greps for "xd" in case-insensitive and list only filenames within current directory
+
+$ timeout 10s yes "stfu" > file.txt &
+//AMPERSAND indicates the yes command to run in the bckground
+
+$ ln  /usr/file.c shortcut.c
+// Creates a link file as a shortcut file and the shortcut file can be deleted
+
+$ ln -s mnt/file.c /home/user/linkedshort.c
+// Creates symbolic link to file across different filesystems or across network
+
+$ at 6:30pm 4 Jul
+rm home/user/Desktop/*
+echo "All desktop files deleted!"
+//Schedule commands
+
+$ nice sort /home/user/Downloads/file* &
+// runs sort on all files named <file> with fewer resource consumption and on the bckgrnd
+
+[Ctrl + Z]
+STOPPED
+//stops current forground process
+
+$ jobs
+//checks for running or stopped jobs
+
+$ bg %3
+//Re-starts job 3 in bckround
+
+$ fg
+//resumes last backround process but in foreground
+
+$ stty tostop
+//Prevents pop-ups from bg jobs
+
+$ stty -tostop
+//Turn-on pop-ups from bg jobs
