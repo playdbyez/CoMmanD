@@ -3,12 +3,38 @@
 3 - Process is scheduled onto the cpu (Running)
 
 Systemd = Init System
-Initi System' schedule commands
+Init System = schedule commands
 
 
+
+PPID = Parent PID
 PID = Process Identifyer
 TID = Thread Identifyer
 TSKCMD = Task Command : name of the command scheduled
 USER = Which user Created the process
 TYPE = Type of object: file,dir,etc
-NODE= iNode: Every file has na inode numb to keep track of permissions, filesize, etc
+NODE = iNode: Every file has na inode numb to keep track of permissions, filesize, etc
+
+Xgp = graphics processor
+:0 = The current screen
+-processName = hyphen means this is the first process for this terminal
+time 149:23 =  process size /time to init it
+
+
+
+
+
+
+::: Computer Terminals :::
+
+IBM 2260  (1964)
+IBM 3270  (1971)
+DEC VT100 (1978)
+DEC VT220 (1983)
+
+tn3270 (Terminal emulator)
+tty    (Terminal emulator)
+ANSI   (Terminal emulator)
+xterm  (Terminal emulator)
+OS/390 (IBM operating system)
+Z/OS   (IBM operating system)
