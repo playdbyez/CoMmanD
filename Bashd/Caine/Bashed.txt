@@ -61,8 +61,14 @@ $ touch .hydeFile
 $ rm Filenam*
 //removes all files within dir with a variant of the name filenam(e)
 
+$ tar -xvf fine_one.tar
+//Standard extracting with tar
 
+$ zcat file.zip | more
+//Display compressed files
 
+$ unzip -l | more
+//Display compressed files
 
 $ steghide extract -sf image.jpg
 $ cat proc/cpuinfo
@@ -340,6 +346,7 @@ $ disown -a && exit
 // exiting terminal but leaving processess running (NoHangupSignal)
 
 $ ps -aux | greep <sleep>
+// find sleeping processes
 
 $ cp olddir/protected.file /dir/protected.file.copy
 $ chown protected.file.copy
@@ -383,3 +390,28 @@ $ stty tostop
 
 $ stty -tostop
 //Turn-on pop-ups from bg jobs
+
+SHELLPATH
+$ echo $PATH
+//Display execution paths from file /.profile
+
+$ PATH = $PATH:$HOME/bag
+//Set /bag as one of the paths of the shell
+
+$ export PATH
+//Activate paths while logged in
+
+$ hash <NewCommand>
+//Activate new command while logged in
+
+$ rehash
+//Alternative activation to new command while logged in
+
+
+$ alias copy = 'usr/bin/cp'
+$ rehash
+//renames command cp to copy
+
+
+$ alias sortnprint = ' sort -r $* | pr -2 | lpr'
+// Sort any number of files in reverse order, formated in 2 columns and print file out of the printer by calling sortnprint command
