@@ -1,0 +1,54 @@
+
+#### FTP three-digit-number-codes ###
+
+first digit                
+1 - Processing            
+2 - Ok
+3 - Needs input
+4 - Unsuccessful
+5 - Error
+
+Third digit = The messages' sequence number for that session
+index.html = Home page's usual file name
+
+
+$ ftp ftp.iecc.com
+// Connect to website
+
+$ <Login:> anonymous  <Password:> email@gmail.com
+// Login to server as anon if requested 
+
+$ prompt
+// Verbose mode on/off
+
+$ dir
+// List contents
+
+$ asc
+// Enable transfer mode for plain text
+
+$ bin
+//  Enable transfer mode for images
+
+$ lcd home/user/Downloads
+// Move around my own directories
+
+$ cdup
+// Move around ftp directories
+
+$ get README.md
+// Download file
+
+$ put myFile  uploadFile
+// Upload file and rename it
+
+$ del myFile 
+// Delete files
+
+$ quit
+// Exit server
+
+$ mput
+$ mdel
+$ mget
+// Multiple file upload, delete and download
