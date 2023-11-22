@@ -1,0 +1,57 @@
+Magnet User Summit 
+May 2023
+
+
+#### :: jpeg :: #########
+$ xxd image.jpg | less
+//Creates a hexdump of file
+//ffd8 = JPEG header signature
+//ffd9 = JPEG footer signature (file has to end with)
+
+//Identify the offset of the hex after ffd9 
+//in the middle set of gibberish
+
+//00009210 = Hex offset 
+//0x921 + a letter corresponding to the position of the signature
+// 921c
+
+$ dd if=image.jpeg bs=1 skip=$((16#921c)) of=result.bin
+//read image.jpeg with blockset set to 1 after you've skipped <converted signature> ammount of lines n output 2 binfile
+//CONVERTEDSIGNATURE = have to convert the signature's hex to decimal for 'skip' option with $(((16#value))
+
+//since the resulting bin file ended with '=='
+//its possible to deduce its a base64 enconded data-set
+//so use the decoder on your bin
+
+$ base64 --decode -i result.bin
+//Right section of xxd or hexdump of a file helps recognise the assignment operator that
+//hints to the encoding
+
+
+############# :: Jpeg, bmp, wav :: ############
+
+$ steghide extract -sf image.jpg
+//will result in  a new file 
+may request passphrase (press enter)
+
+############# :: Stylesuxx  :: ############
+//works with png images
+//online tool is necessary
+
+
+############# :: wav :: ############
+
+//use VLC
+//play around with audio visualization
+//Identified option ='scope' to visualize right and left channels of file
+//something off on left channel?
+//split the channels into files!!
+
+$ ffmpeg -i music.wav -af "pan=1|c0=c0" left.wav
+//outputs to left.wav, only the left audio channel of music wav
+
+$ ffmpeg -i music.wav -af "pan=1|c1=c1" right.wav
+//outputs to right.wav, only the right audio channel of music wav
+
+$ ffplay left.wav
+//to play
