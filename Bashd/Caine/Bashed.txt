@@ -20,6 +20,16 @@ $ /usr/include/X11
 $ stty sane
 [Ctrl + J]
 
+
+#############
+
+(inside terminal, Press: Ctrl+R)
+//Search tool
+
+(inside terminal, Press: Ctrl+X + E)
+//opens an editor that will execute upon save/exit
+
+
 ##################################################################################
 
 
@@ -100,6 +110,20 @@ $ shasum
 //Used for calculating a checksum of a file
 //In order to check for discrepancies against the checksum provided by source
 
+$ finger <username>
+$ finger <email>
+// Id users on LAN
+// Display window-idle time (time since last input)
+// Display most active window (blank mark)
+
+$ rwho
+// Id users on LAN
+
+$ write <username> <ttyp3>
+// Lan Messaging (Ctrl + D to exit)
+
+$ talk <user>
+// Instant messaging
 
 $ less /lib/systemd/system/nginx.service
 // Info of a service's options, Start,Stop,Reload,StartPre for systemctl
@@ -138,14 +162,8 @@ $ systemctl -list-units --type=service
 // list systemd units by service and activity 
 
 
-$ (inside terminal, Press: Ctrl+R)
-//Search tool
-
-$ (inside terminal, Press: Ctrl+X + E)
-//opens an editor that will execute upon save/exit
-
 $ sleep 12
-Ctrl + D
+Ctrl + z
 [1]+  Stopped  sleep 12
 $ bg
 //After stopping, restart previous command but run it in the background
@@ -319,6 +337,9 @@ ip -o -f inet addr show | awk '/scope global/{print $2,$4,$6}'
 //IP address for said interface followed by subnet mask (/24)
 //The broadcast IP address for that interface's subnet
 
+$ telnet
+// Similar to ssh to connect to machines
+
 $ cu somesystem
 //CallUp is similar to ssh since it acts as a dial-in terminal to another system
 
@@ -363,6 +384,9 @@ $ ln  /usr/file.c shortcut.c
 
 $ ln -s mnt/file.c /home/user/linkedshort.c
 // Creates symbolic link to file across different filesystems or across network
+
+$ scp somesys:their_file.txt renamed_file.txt
+// Copy across network
 
 $ at 6:30pm 4 Jul
 rm home/user/Desktop/*
