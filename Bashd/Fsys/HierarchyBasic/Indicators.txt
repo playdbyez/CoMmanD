@@ -38,3 +38,15 @@ ANSI   (Terminal emulator)
 xterm  (Terminal emulator)
 OS/390 (IBM operating system)
 Z/OS   (IBM operating system)
+
+
+
+::: Shells :::
+
+Bourne shell
+C      shell
+Kern   shell
+Bash   shell
+
+
+
