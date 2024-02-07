@@ -14,6 +14,8 @@ cls - clear screen
 
 cp - Copy
 
+cd D: - change dir from C:\ drive to D:\ drive
+
 sndvol - Volume Mixer
 
 explorer - File Manger
