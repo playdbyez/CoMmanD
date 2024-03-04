@@ -12,6 +12,7 @@ USE < BleachBit > Software for cleansing "log files" like .xml
 #   Lib Locations        #
 ##########################
 $ /usr/include/X11
+//also useful to search through bin for man pages
 
 ##########################  
 #     Frozen Terminal    #
@@ -32,6 +33,8 @@ $ stty sane
 
 ##################################################################################
 
+% file a.out
+// displays information about a file
 
 $ sudo dmidecode > /tmp.text
 // Display Desktop Management Interface
@@ -192,7 +195,7 @@ $ systemd-analyze dump
 
 $ last
 //Enables last binnary file to be converted to simple text  
-()
+
 
 $ !! a
 //repeats last command starting with 'a'
@@ -204,7 +207,11 @@ $ sudo find / -name *.pdf
 //finds all pdf files
 
 $ du -sh file 
-//Displays filesize
+//Displays filesize in human readable
+
+$ du -s * | sort -n
+// list directories and their sizes 
+//then sizes are intrpreted as int instead of char and sorted
 
 $ ls -l path-to-file
 //displays path to file with ls 
@@ -396,6 +403,19 @@ echo "All desktop files deleted!"
 $ nice sort /home/user/Downloads/file* &
 // runs sort on all files named <file> with fewer resource consumption and on the bckgrnd
 
+$ shuff -i 1-10
+// shuffle values 1 to 10 within an array
+
+$ shuff -i 1-100 -n 20
+// shuffles values 1 to 100 but displays only the first 20 values
+
+$ shuff -i 1-100 -r -n 20 > test2
+//shuffles 1 to 100 with repeat values and stores only the first 20 values to file test2
+
+$ sort test2 | uniq -d
+//sort test2 in ascending order then displays which values are duplicate
+
+
 [Ctrl + Z]
 STOPPED
 //stops current forground process
@@ -439,3 +459,8 @@ $ rehash
 
 $ alias sortnprint = ' sort -r $* | pr -2 | lpr'
 // Sort any number of files in reverse order, formated in 2 columns and print file out of the printer by calling sortnprint command
+
+
+
+
+
