@@ -33,8 +33,11 @@ $ stty sane
 
 ##################################################################################
 
-% file a.out
+$ file a.out
 // displays information about a file
+
+$ diff output.txt  expected.txt
+//compare 2 files for similar content
 
 $ sudo dmidecode > /tmp.text
 // Display Desktop Management Interface
