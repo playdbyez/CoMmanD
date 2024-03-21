@@ -353,6 +353,15 @@ $ telnet
 $ cu somesystem
 //CallUp is similar to ssh since it acts as a dial-in terminal to another system
 
+$ ssh-keygen -t rsa -b 2
+>tempo-rsa
+>passworD1
+// Creates  a password protected key under file-name tempo_rsa
+
+$ cat ~/.ssh/tempo_rsa.pub
+// Outputs public key
+
+
 $ ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
 //
 [CTRL + Z]
@@ -464,6 +473,8 @@ $ alias sortnprint = ' sort -r $* | pr -2 | lpr'
 // Sort any number of files in reverse order, formated in 2 columns and print file out of the printer by calling sortnprint command
 
 
+$ tree --charset=ascii
+// Lists a directory and its children
 
 
 
