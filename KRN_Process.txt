@@ -1,0 +1,9 @@
+LINUX PAPERZ
+
+[JANT] analysis of linux service management system according to boot process change
+
+Abstract
+Linux was born under the influence of Unix except from the kernel, Linux was used to bring the Unix system and relevant program
+package, commands, etc.
+However, the latest version of Enterprise Linux RHEL 7 was adopted systemd instead of init to boot program and services.
+The adoption of systemd was building its own Linux system, the 
