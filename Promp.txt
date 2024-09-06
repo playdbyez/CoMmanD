@@ -6,6 +6,7 @@ $ command > ToFile
 
 winver - Displays Windows Version
 systeminfo - All information on the system
+msinfo32 - All information on the system
 help - HELPS
 
 start <program-name> - Launcher
