@@ -1,0 +1,83 @@
+
+######### [] RUN LEVEL [] #########
+0   -    Halt (Do not set initdefault to this)
+1   -    Single user mode
+2   -    Multiuser, without NFS (The same as 3, if you do not have networking)
+3   -    Full multiuser mode
+4   -    Unused
+5   -    X11
+6   -    Reboot (Do not set initdefault to this)
+
+
+
+######### [] SYSTEMD TARGETS [] #########
+TARGET                -      PURPOSE
+graphical.target      -      System supports multiple users, gra[hical and text-based logins
+multi-user.target     -      System supports multiple users, text-based logins only
+rescue.target         -      sulogin prompt, basic system initialization completed
+
+
+
+
+
+$ pstree | head -20
+//Check systemd processes
+
+$ systemctl status sshd.service
+// confirm service status
+
+$ cd lib/systemd/system
+$ ls -l runlevel?.target
+//Target files associated with Runlevel.
+
+$ systemctl list-units --type=socket --all
+//List of active Socket Unit
+
+
+$ chkconfig sshd on
+$ chkconfig sshd off
+//Configure a service to start/stop at boot time ( init )
+
+$ systemctl enable sshd.service
+$ systemctl disable sshd.service
+//Configure a service to start/stop at boot time ( systemd )
+
+$ service sshd start
+$ service sshd stop
+//Start/stop a service on a running system ( init )
+
+$ systemctl start sshd.service
+$ systemctl stop sshd.service
+//Start/stop a service on a running system ( systemd )
+
+Examples of Runlevel change
+# systemctl rescue
+# systemctl poweroff
+# systemctl reboot
+
+Examples of selecting a boot target
+# systemctl get-default
+# systemctl set-default multi-user.target
+# systemctl isolate runlevel3.target
+
+Examples of unit information
+# systemctl list-units
+# systemctl list-unit-files
+# systemctl list-sockets
+# systemctl list-dependencies sshd.service
+
+Examples of systemd-analyze
+# systemd-analyze
+# systemd-analyze blame
+# systemd-analyze critical-chain
+# systemd-analyze plot > systemd.svg
+
+Examples of journalct
+# journalctl
+# journalctl /sbin/sshd
+# journalctl -p err
+# journalctl /dev/sda
+# journalctl --since=2016-5-13
+# journalctl --since=2016-5-13 --until=2016-6-30
+
+
