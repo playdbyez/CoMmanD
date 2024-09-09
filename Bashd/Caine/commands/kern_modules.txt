@@ -8,7 +8,10 @@ Since by default kernel module settings are lost upon reboot,
 To achieve persistency through reboot you must edit the files bellow
 /etc/sysctl.conf  or   /etc/sysctl.d/*.conf
 
-
+//Memory Caches [Unix Internals]
+The Kernel Device Driver uses functions such as:
+kmalloc to allocate a memory block and 
+kfree to free a memory block 
 
 :: KERNEL VERSION ::
 
