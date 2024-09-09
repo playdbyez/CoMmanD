@@ -40,7 +40,7 @@ usr/sbin/avahi-autoipd
  
  
 :::::::::::::::::::::::::::::::
- attempting to rum rhythmbox  after termination results in
+ attempting to run rhythmbox  after termination results in
  new process "colord-sa PID 10884"
  after aprox 2mins...
  new process "rhythmbox PID 10947"
