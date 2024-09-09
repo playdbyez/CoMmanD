@@ -1,8 +1,22 @@
-Socket Statistics
+//Port Auditing
+
+
+The Well Known Ports 0 - 1023.
+The Registered Ports 1024 - 49151.
+The Dynamic and Private Ports 49152 - 65535
+
+:::::::::::::::::: :: Identify Ports :: :::::::::::::::::::::::::::::::::::
+$ cat /etc/services 
+//IANA default ports are stored in '/etc/services'
+
+
+$ tail -10 etc/services 
+$ grep -w '443/tcp' /etc/services
+$ grep -E -w '22/(tcp|udp)' /etc/services
 
 
 
-//ID Listening ports
+::::::::::::::::::::: :: Identify Listening ports :: :::::::::::::::::::::::::::::::::::
 $ ss -s
 % ss -tulpne
 $ ss -alpe
