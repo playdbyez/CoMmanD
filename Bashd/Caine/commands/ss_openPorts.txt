@@ -1,11 +1,21 @@
 Socket Statistics
 
-//Session of 0.0.0.0 means ALL Sessions
+
 
 //ID Listening ports
+$ ss -s
+% ss -tulpne
 $ ss -alpe
 OUTPUT:
 Will display -All -Listening -Process Name -Extended
+	TCP   LISTEN   127.0.0.1:631    [::]:*     cupsd
+	TCP   LISTEN   0.0.0.0:22       [::]:*     sshd
+//Process cupsd is listening on the loopback IP address through port 631
+//Process ssh is listening for ssh connections on all IP addresses through port 22
+//Session of 0.0.0.0 means ALL Sessions
+
+
+
 
 //Kill Ports
 kill -KILL <pid>
