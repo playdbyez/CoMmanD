@@ -4,6 +4,23 @@ Packet capturing utility
 AKA a command-line WireShark
 useful for capturing info first hand however, for analysis of the pcap, use a GUI like wireshark
 
+## In case of Network issues with TCP ## 
+
+Check TraceFile(pcap)
+Start by Transport layer
+
+if TCP has no delays or retransmissions
+go up and look at application
+
+If TCP has delays or retransmissions
+go down to the network layer
+...
+
+
+
+
+
+
 
 $ tcpdump -i wlan0mon
 //Requires the Network Interface Card to be configured into Monitor-Mode, first.
