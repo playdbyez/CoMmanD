@@ -1,0 +1,54 @@
+//On-Boot Internet Processes 
+
+snapd
+
+systemd-r : UDP/TCP on port 53(domain)
+
+NetworkManager
+
+cupsd
+
+
+
+//Kill snapd
+unrun:
+usr/lib/snapd/snapd
+usr/lib/snapd/snapd.run-from-snap 
+usr/lib/snapd/
+usr/lib/snapd/snap-bootstrap 
+usr/lib/snapd/snap-confine 
+usr/lib/snapd/snapctl 
+sudo kill -TERM 10060
+
+
+//Kill cupsd
+unrun:
+usr/sbin/cupsd
+
+
+//Kill avahii
+unrun:
+usr/sbin/avahi-daemon 
+usr/sbin/avahi-autoipd 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//Conection check
+ $ nmcli connectivity
+ limited
+ 
+ 
+:::::::::::::::::::::::::::::::
+ attempting to rum rhythmbox  after termination results in
+ new process "colord-sa PID 10884"
+ after aprox 2mins...
+ new process "rhythmbox PID 10947"
+>>
+processes running 
+COMMAND     PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+systemd-r  1606 systemd-resolve   12u  IPv4  24460      0t0  UDP 127.0.0.53:53 
+systemd-r  1606 systemd-resolve   13u  IPv4  24461      0t0  TCP 127.0.0.53:53 (LISTEN)
+rhythmbox 10947          ubuntu   15u  IPv4 133363      0t0  TCP *:3689 (LISTEN)
+rhythmbox 10947          ubuntu   16u  IPv6 133364      0t0  TCP *:3689 (LISTEN)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
