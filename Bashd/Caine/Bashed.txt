@@ -447,15 +447,6 @@ $ stty tostop
 $ stty -tostop
 //Turn-on pop-ups from bg jobs
 
-SHELLPATH
-$ echo $PATH
-//Display execution paths from file /.profile
-
-$ PATH = $PATH:$HOME/bag
-//Set /bag as one of the paths of the shell
-
-$ export PATH
-//Activate paths while logged in
 
 $ hash <NewCommand>
 //Activate new command while logged in
