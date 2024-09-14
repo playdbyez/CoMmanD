@@ -1,0 +1,29 @@
+::: Shells :::
+
+If the shell itself supports said functionality,
+Shell scripting can involve multiple shell environments.
+
+
+[] Bourne shell / Bash
+- file.sh
+- highly portable
+- associative arrays
+- string manipulation 
+- enhanced control structures
+- singular shell environment
+
+[] C shell
+- file.csh
+- similar syntax to C
+
+[] TENEX C Shell
+- file.tcsh
+- compatible with the C shell
+- supported by BSD-3
+
+[] Korn shell
+- file.ksh
+- built-in arithmetic operations
+
+[] Bash shell
+- file.bash
