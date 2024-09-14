@@ -1,6 +1,5 @@
-Log levels are used to issue warning to the user via the console.
-Can be acessed via the dir:
-$ proc/sys/kernel
+LOCATION : proc/sys/kernel
+Log levels are used to issue system warnings to the user via the console.
   
   Severity
   [7] - KERN_DEBUG   = Used for debbuging
@@ -14,7 +13,7 @@ $ proc/sys/kernel
 
 
 
-Log levels can be scheduled to interact with the terminal by the options bellow:
+Log levels can be scheduled to interact with the terminal via:
 
 console_loglevel          =  Console will only display messages of a higher severity then specified
 default_message_loglevel  = Default level asigned to an unclassed message
