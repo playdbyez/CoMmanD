@@ -9,3 +9,15 @@ tn3270 (Terminal emulator)
 tty    (Terminal emulator)
 ANSI   (Terminal emulator)
 xterm  (Terminal emulator)
+
+
+:::: Terminal Activation ::::
+
+The default terminal Linux terminal is ttyS0 
+used to receive Linux kernel messages, etc.
+
+$ console=hvc0
+// switching default terminal from tty to hvc
+
+$ console=hvc0 console=ttyS0
+// activating the hvc terminal but maintaining tty as the default
