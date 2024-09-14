@@ -1,6 +1,0 @@
-LINUX PAPERZ
-
-[JANT] analysis of linux service management system according to boot process change
-
-
-
