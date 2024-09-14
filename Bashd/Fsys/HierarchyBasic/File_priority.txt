@@ -30,4 +30,7 @@ USR > Non-essential to the OS, intended for end user, includes dir /local & /bin
 /usr/local > 
 
 
-VAR > keepts tracks of logs
+VAR > Keeps tracks of logs
+
+
+PROC > Virtual filesystem that represents the ongoing system state created by the kernel and maintained in memory. 
