@@ -9,10 +9,14 @@ $ last
 $ sudo lastb -adF
 //To read gibberish files
 
+$ sudo tail -f auth.log
+//Enables Follow mode
 
 
-for in most languages is syntactic sugar for an equivalent while loop, which is in turn syntactic sugar for a set of labels and gotos down in assembly or IL. Given an efficient implementation of the language spec, these will be roughly equal. Some languages include internal "comments" giving hints to decompilers/reflectors about what the original code looked like, which will have a negligible effect on performance. I think you'll find that the biggest execution time differences between these are inherent in OS scheduling. – 
-KeithS
+for in most languages is syntactic sugar for an equivalent while loop, which is in turn syntactic sugar for a set of labels and gotos down in assembly or IL. 
+Given an efficient implementation of the language spec, these will be roughly equal. 
+Some languages include internal "comments" giving hints to decompilers/reflectors about what the original code looked like, which will have a negligible effect on performance. 
+I think you'll find that the biggest execution time differences between these are inherent in OS scheduling. – KeithS
  Sep 2, 2010 at 16:51 
 
 
