@@ -10,7 +10,7 @@ $ sudo lastb -adF
 //To read gibberish files
 
 $ sudo tail -f auth.log
-//Enables Follow mode
+//Enables Follow mode on the auth file
 
 
 for in most languages is syntactic sugar for an equivalent while loop, which is in turn syntactic sugar for a set of labels and gotos down in assembly or IL. 
