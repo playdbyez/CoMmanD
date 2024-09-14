@@ -56,12 +56,3 @@ tty    (Terminal emulator)
 ANSI   (Terminal emulator)
 xterm  (Terminal emulator)
 
-
-
-
-::: Shells :::
-
-Bourne shell
-C      shell
-Kern   shell
-Bash   shell
