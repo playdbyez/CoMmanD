@@ -27,3 +27,16 @@ Shell scripting can involve multiple shell environments.
 
 [] Bash shell
 - file.bash
+
+
+
+::: SHELLPATH :::
+
+$ echo $PATH
+//Display execution paths from file /.profile
+
+$ PATH = $PATH:$HOME/bag
+//Set /bag as one of the paths of the shell
+
+$ export PATH
+//Activate paths while logged in
