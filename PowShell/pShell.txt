@@ -75,15 +75,22 @@ $ cmd /c help vol
 
 
 $ $env:Path
-prints trustworthy folders
+//prints trustworthy folders
 
 $ $env:Path += "C:\programs\WindowsNT\accessories"
-wordpad.exe
+//wordpad.exe
 
-adds folder to trustworthy golders group
+//adds folder to trustworthy golders group
 
 
 
+for ($i=1; $i -le 10; $i++) {$i,"`n"}
+// shell lop syntax
+//The command is output to a newline per iteration
+//`n == \n
+// $i - 10 == i < 10
+// $i -le 10 == i =< 10
+ 
 
 
 
