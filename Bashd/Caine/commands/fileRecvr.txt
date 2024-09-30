@@ -1,0 +1,19 @@
+install testdisk to recover a lost partition or repair the filesystem from a hard disk, USB key, Smart Card, etc..
+
+
+To recover partition from a media image or repair a filesystem image, run
+
+$ testdisk image.dd 
+//to work from a raw disk image
+
+$ testdisk image.E01 
+//recovers files from an Encase EWF image
+
+$ testdisk 'image.???' 
+//if the Encase image is split into several files.
+
+$ testdisk /dev/mapper/truecrypt0 
+$ testdisk /dev/loop0 
+//repair a filesystem not listed by TestDisk
+//the first options repairs the NTFS or FAT32 boot sector files from a TrueCrypt partition. 
+//The same method works with filesystem encrypted with cryptsetup/dm-crypt/LUKS.
