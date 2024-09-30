@@ -17,3 +17,6 @@ $ testdisk /dev/loop0
 //repair a filesystem not listed by TestDisk
 //the first options repairs the NTFS or FAT32 boot sector files from a TrueCrypt partition. 
 //The same method works with filesystem encrypted with cryptsetup/dm-crypt/LUKS.
+
+
+use raw device /dev/rdisk* instead of /dev/disk* for faster data transfer
