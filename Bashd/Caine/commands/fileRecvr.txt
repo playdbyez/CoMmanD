@@ -20,3 +20,6 @@ $ testdisk /dev/loop0
 
 
 use raw device /dev/rdisk* instead of /dev/disk* for faster data transfer
+
+
+//https://www.cgsecurity.org/wiki/Articles
