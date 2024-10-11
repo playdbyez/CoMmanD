@@ -27,3 +27,15 @@ $ etc/default/grub
 Next, it is necessary to relad grub into the changes via the config or the wrapper command:
 $ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 $ sudo update-grub
+
+###############
+LOCATION : /boot/grub/grub.conf 
+LOCATION : /boot/grub/grub.cfg
+GRUB_CMDLINE_LINUX_DEFAULT=“quiet loglevel=3 nowatchdog”
+
+
+[] watchdog = automatic reboot of hung systems (intended for servers)
+[] quiet    = silent boot (turns off most log level messages)
+[] dmesg    = displays driver and kernel-related messages retrieved from the kernel ring buffer (hardware faults, startup processes)
+
+
