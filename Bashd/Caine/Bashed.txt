@@ -350,6 +350,10 @@ ip -o -f inet addr show | awk '/scope global/{print $2,$4,$6}'
 $ telnet
 // Similar to ssh to connect to machines
 
+$ rsh -?
+// Similar to ssh to connect to remote host
+// Default port is 514
+
 $ cu somesystem
 //CallUp is similar to ssh since it acts as a dial-in terminal to another system
 
