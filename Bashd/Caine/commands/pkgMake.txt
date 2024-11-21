@@ -1,4 +1,13 @@
 ##:: Makefile ::##
 
 [] Used to build packages prior to installation
+
 [] Manually editing of the makefile used to be required before its automated version was released (automake)
+
+[] The command automake requires the INSTALL file to exist
+
+[] Its building process can be divided into two operations 
+   > autoconf = Automate testing of the build environment
+   > automake = Automate creation of makefiles
+
+
