@@ -1,0 +1,4 @@
+##:: Makefile ::##
+
+[] Used to build packages prior to installation
+[] Manually editing of the makefile used to be required before its automated version was released (automake)
